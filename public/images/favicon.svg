@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="46.028999"
+   height="46.028999"
+   viewBox="0 0 46.028999 46.028999"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="favicon.svg">
+  <metadata
+     id="metadata29">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Wedge</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="956"
+     inkscape:window-height="1036"
+     id="namedview27"
+     showgrid="false"
+     inkscape:zoom="6.3783784"
+     inkscape:cx="19.719202"
+     inkscape:cy="16.964695"
+     inkscape:window-x="960"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Group"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="title4">Wedge</title>
+  <desc
+     id="desc6">Created using Figma</desc>
+  <g
+     id="Canvas"
+     transform="translate(-1591.3636,70.756451)">
+    <g
+       id="Wedge">
+      <g
+         id="Group">
+        <g
+           id="Vector 3"
+           fill="#26a65b"
+           transform="matrix(0.9999936,0,0,1.2844814,0.0101825,7.0345016)">
+          <use
+             xlink:href="#path0_fill"
+             transform="matrix(1.02495,-0.00595443,0.00661451,0.972955,1591.27,-44.9807)"
+             id="use12"
+             fill="#26a65b"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           id="g14"
+           fill="#26a65b"
+           transform="matrix(0.9999936,0,0,1.2844814,0.0101825,7.0345016)">
+          <use
+             xlink:href="#path1_fill"
+             transform="matrix(1.02495,-0.00595443,0.00661451,0.972955,1596.03,-38.4196)"
+             id="use16"
+             fill="#26a65b"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           id="g18"
+           fill="#26a65b"
+           transform="matrix(0.9999936,0,0,1.2844814,0.0101825,7.0345016)">
+          <use
+             xlink:href="#path2_fill"
+             transform="matrix(1.02495,-0.00595443,0.00661451,0.972955,1625.19,-60.5122)"
+             id="use20"
+             fill="#26a65b"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <defs
+     id="defs22">
+    <path
+       id="path0_fill"
+       d="M 4.60105,20.2693 C -2.63018,18.4391 -0.611067,7.64101 5.63407,6.77168 12.1135,6.89137 16.8056,9.32015 20.2751,11.1914 c 1.7629,0.9508 3.2102,1.7577 4.4159,2.0446 0.0985,0.0234 0.1976,0.0505 0.299,0.0494 C 26.504,13.2691 28.9209,8.02196 31.7745,2.62153 32.2379,1.74448 32.7128,0.863384 33.1973,0 l 3.506,1.76963 C 34.2732,6.26049 29.7247,15.0981 26.538,17.925 c -0.6589,0.5846 -1.4265,1.0529 -2.2336,1.4058 -0.8882,0.3885 -2.0348,0.6933 -3.3317,0.9263 C 15.472,21.2456 7.26687,20.944 4.60105,20.2693 Z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path1_fill"
+       d="M 0,13.4976 1.03302,0 C 7.51245,0.119689 12.2045,2.54847 15.674,4.41973 l 0.6977,9.06567 C 10.8709,14.4739 2.66583,14.1723 0,13.4976 Z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path2_fill"
+       d="M 8.38838,0 0,15.7601 3.50598,17.5297 11.8944,1.76963 8.38838,0 Z"
+       inkscape:connector-curvature="0" />
+  </defs>
+</svg>

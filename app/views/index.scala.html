@@ -1,0 +1,222 @@
+@import b3.vertical.fieldConstructor // Declares a vertical field constructor as default
+@(buildForm: Form[BuildData], platforms: List[(String, String)])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@main("Unrestricted Caddy fork") {
+    <nav class="navbar navbar-wedge navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="/assets/images/wedge.svg"> Wedge</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#download">Download</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Get the code</a></li>
+                    <li><a href="#">Docs</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+
+
+        <div class="jumbotron jumbotron-wedge">
+            <h1 class="display-3">A secure webserver; free for <em>everyone</em></h1>
+            <p class="lead">
+                A fork of Caddy without the license fees or a restrictive EULA. Free to use however you like.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#download" role="button"><i class="material-icons">file_download</i>
+                    Download now</a>
+                <a class="btn btn-success btn-lg" href="https://www.github.com/WedgeServer/Wedge" role="button"><i class="material-icons">code</i>
+                    Get the code</a>
+            </p>
+        </div>
+
+
+        <div class="col-md-7">
+            <h1><i class="material-icons">lock</i> Automatic TLS</h1>
+            <p>
+                Caddy, and Wedge by extension, automatically integrates with <a href="https://letsencrypt.org">
+                Let's Encrypt</a> to
+                provide painless HTTPS support out of the box.
+            </p>
+
+            <p>
+                No need for <abbr title="Certificate signing request">CSR</abbr>
+                s, email verification or manual approval.
+                Wedge uses <a href="https://github.com/xenolf/lego">Lego</a>
+                , a pure Go <abbr title="Automatic Certificate Management Environment">ACME</abbr>
+                client that can automatically prove domain ownership and request free SSL certificates.
+            </p>
+
+            <p>And there's no need to ever manually renew another certificate. Everything is taken care of for you.</p>
+        </div>
+
+        <div class="col-md-7">
+            <h1><i class="material-icons">apps</i> Plugin Support</h1>
+
+            <p>Wedge has support for a wide array of plugins. One of the core aims of the fork is to maintain
+                API compatibility with Caddy &mdash; so all of the great plugins you may already know should work out
+                of the box.
+            </p>
+
+            <p>
+                If you're unfamiliar with Caddy, that means support for rate limiting, DNS providers like Namecheap&trade; for domain ownership verification,
+                caching and more. Check out the full <a href="#plugins">plugins</a> list for more.
+            </p>
+        </div>
+
+        <div class="col-md-10">
+            <h1><i class="material-icons">compare</i> Comparison table</h1>
+            <p>
+        <table class="table table-bordered table-striped table-hover table-responsive table-wedge-comparison">
+            <thead>
+                <tr>
+                    <th class="vanish">
+
+                    </th>
+                    <th>
+                        Wedge
+                    </th>
+                    <th>
+                        Caddy &trade; @* TODO: &circledR; *@
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Automatic TLS
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Automatic TLS is in Wedge</span>
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Automatic TLS is in Caddy</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Free for personal use
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Wedge is free for personal use</span>
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Caddy is free for personal use</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Free for commercial use
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Wedge is free for commercial use</span>
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-unchecked">not_interested</i> <span>
+                        (&gt; $1000 / year)</span>
+                        <span class="sr-only">Caddy binaries are not permitted for commercial use</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        No restrictive EULA applied to downloads
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Wedge does not apply an EULA to its builds</span>
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-unchecked">not_interested</i> <span>
+                        <span class="sr-only">Caddy binaries are encumbered with a restrictive EULA</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        No advertising sent to user's browser
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i> <sup>1</sup>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Commercial support
+                    </td>
+                    <td>
+                        <i class="material-icons" data-toggle="tooltip" title="Wedge isn't a commercial offering. If you are a large corporation, consider purchasing a Caddy license.">warning</i>
+                        <span class="sr-only">Wedge does not have a commercial support offering</span>
+                    </td>
+                    <td>
+                        <i class="material-icons wedge-check">check_circle</i>
+                        <span class="sr-only">Caddy has a paid, email-only support offering</span>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+            <small>[1] As of 2017-09-15 the <a href="https://github.com/mholt/caddy/pull/1866">sponsor header</a>
+                that was
+                present (and couldn't be disabled) has been removed.</small>
+        </div>
+
+
+    </div>
+    <a id="download"></a>
+    <div class="container-fluid">
+        <hr>
+        <div class="col-md-24">
+            <h1><i class="material-icons">build</i> Get a custom build</h1>
+            <p>Go 1.8 includes a plugin build-mode for plugins that can be loaded at run-time. Unfortunately, &ldquo;plugin support is currently incomplete, only supports Linux, and has known bugs&rdquo;.
+                As such, Wedge currently requires plugins to be picked and compiled together. There is an intuitive interface you can use to select the plugins you'd like to enable and easily
+                build your own binary:
+            </p>
+            @b3.form(routes.HomeController.index) {
+
+                <div class="col-md-12">
+                    @b3.select(buildForm("name"), options = platforms, '_label -> "Platform")
+                    @b3.select(buildForm("license"), options = List(("1", "Free as in speech (no restrictions)")), '_label -> "License")
+                </div>
+                <div class="col-md-12">
+                    <strong>Plugins: </strong> <span class="label label-primary">Active WIP</span>
+
+
+                    <div></div>
+                </div>
+
+
+
+            }
+            <div class="clearfix"></div>
+
+
+    </div>
+
+        <a href="https://github.com/WedgeServer/wedge/releases" class="btn btn-success">Download</a>
+
+
+    </div>
+
+    <footer>
+        <span class="left">Built with <a href="https://playframework.com">Play</a>. FOSS.</span>
+        <span class="right">Builds powered by {build tool}</span>
+    </footer>
+}

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import "material-fonts";
+
+// Begin Bootstrap
+@import "bootstrap";
+// End Bootstrap
+
+@font-size-base: 16px;
+@font-family-sans-serif: 'Montserrat', sans-serif;
+@navbar-wedge-bg: #26A65B;
+@navbar-wedge-link-color: #dfdfdf;
+@navbar-wedge-link-hover-color: #ffffff;
+@navbar-wedge-link-active-bg: darken(@navbar-wedge-bg, 10%);
+@navbar-wedge-link-hover-bg: darken(@navbar-wedge-bg, 5%);
+@grid-columns: 24;
+
+
+
+body {
+  font-weight: 400;
+}
+
+footer {
+  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  margin-top: @navbar-margin-bottom;
+  padding-right: @navbar-padding-horizontal;
+  padding-left:  @navbar-padding-horizontal;
+  background-color: #444;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  a:hover, a:focus {
+    color: lighten(@link-color, 10%);
+  }
+}
+
+.navbar-wedge {
+  background-color: @navbar-wedge-bg;
+  border-color: lighten(@navbar-wedge-bg, 10%);
+
+  .navbar-brand {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-brand-hover-color;
+      background-color: @navbar-inverse-brand-hover-bg;
+    }
+
+    img {
+      display: inline-block;
+      max-height: 20px;
+      margin-top: -4px;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-inverse-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-wedge-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-wedge-link-hover-color;
+        background-color: @navbar-wedge-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-wedge-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+        background-color: @navbar-inverse-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-inverse-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-inverse-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-inverse-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-inverse-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-inverse-link-active-bg;
+        color: @navbar-inverse-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-inverse-border;
+        }
+        .divider {
+          background-color: @navbar-inverse-border;
+        }
+        > li > a {
+          color: @navbar-inverse-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-inverse-link-hover-color;
+            background-color: @navbar-inverse-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-inverse-link-active-color;
+            background-color: @navbar-inverse-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-inverse-link-disabled-color;
+            background-color: @navbar-inverse-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-inverse-link-color;
+    &:hover {
+      color: @navbar-inverse-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: @navbar-inverse-link-color;
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+      }
+    }
+  }
+}
+
+.jumbotron-wedge {
+  margin-top: calc(50px + 5rem);
+  h1 {
+    color: white;
+  }
+
+  p {
+    font-weight: 400;
+    color: white;
+  }
+
+  background-image: url("https://unsplash.com/photos/hymeGBGqjaQ/download?force=true");
+  background-position: 0 50%;
+  background-size: cover;
+}
+
+.table-wedge-comparison {
+
+  border: none;
+
+  th:not(.vanish) {
+    border-top: 1px solid #dddddd !important;
+  }
+
+  th.vanish {
+    border-left: none !important;
+  }
+  .wedge-check {
+    color: #26A65B;
+  }
+
+  .wedge-unchecked:not(.wedge-by-design), .wedge-unchecked+span {
+    color: maroon;
+    font-weight: bold;
+  }
+}
+
+.container-fluid {
+  max-width: 1400px;
+}
