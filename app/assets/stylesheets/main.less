@@ -28,12 +28,22 @@ footer {
   padding-left:  @navbar-padding-horizontal;
   background-color: #444;
   color: #ddd;
+
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
+
   a:hover, a:focus {
     color: lighten(@link-color, 10%);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
   }
 }
 
@@ -213,6 +223,15 @@ footer {
   }
 }
 
-.container-fluid {
+.container-fluid, .footer-inner {
   max-width: 1400px;
+}
+
+
+.space-between {
+  margin-top: 11px;
+}
+
+body {
+  position: relative;
 }

@@ -13,7 +13,7 @@ libraryDependencies += "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3"
 libraryDependencies += "org.webjars" % "bootstrap" % "3.3.7-1"
 libraryDependencies += "org.webjars" % "jquery" % "3.2.1"
 libraryDependencies += "org.webjars" % "material-design-icons" % "3.0.1"
-
+libraryDependencies += "com.github.andr83" %% "scalaconfig" % "0.4"
 
 
 

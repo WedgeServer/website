@@ -1,6 +1,7 @@
 @import b3.vertical.fieldConstructor // Declares a vertical field constructor as default
+@import views.html.helper.CSRF
 @(buildForm: Form[BuildData], platforms: List[(String, String)])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
-@main("Unrestricted Caddy fork") {
+@main("The unrestricted Caddy fork") {
     <nav class="navbar navbar-wedge navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -189,10 +190,11 @@
                 As such, Wedge currently requires plugins to be picked and compiled together. There is an intuitive interface you can use to select the plugins you'd like to enable and easily
                 build your own binary:
             </p>
-            @b3.form(routes.HomeController.index) {
+            @b3.form(routes.HomeController.build) {
+                @CSRF.formField
 
                 <div class="col-md-12">
-                    @b3.select(buildForm("name"), options = platforms, '_label -> "Platform")
+                    @b3.select(buildForm("platformIndex"), options = platforms, '_label -> "Platform", '_error -> buildForm.error("platformIndex"))
                     @b3.select(buildForm("license"), options = List(("1", "Free as in speech (no restrictions)")), '_label -> "License")
                 </div>
                 <div class="col-md-12">
@@ -201,7 +203,11 @@
 
                     <div></div>
                 </div>
+                <div class="clearfix"></div>
 
+                <div class="col-md-12 space-between">
+                    <input type="submit" class="btn btn-success" value="Download" />
+                </div>
 
 
             }
@@ -210,13 +216,15 @@
 
     </div>
 
-        <a href="https://github.com/WedgeServer/wedge/releases" class="btn btn-success">Download</a>
+        <!-- <a href="https://github.com/WedgeServer/wedge/releases" class="btn btn-success">Download</a> -->
 
 
     </div>
 
     <footer>
-        <span class="left">Built with <a href="https://playframework.com">Play</a>. FOSS.</span>
-        <span class="right">Builds powered by {build tool}</span>
+        <div class="footer-inner">
+            <span class="left">Built with <a href="https://playframework.com">Play</a>. FOSS.</span>
+            <span class="right">Builds powered by {build tool}</span>
+        </div>
     </footer>
 }
