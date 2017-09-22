@@ -33,7 +33,7 @@
         <div class="jumbotron jumbotron-wedge">
             <h1 class="display-3">A secure webserver; free for <em>everyone</em></h1>
             <p class="lead">
-                A fork of Caddy without the license fees or a restrictive EULA. Free to use however you like.</p>
+                Wedge is a modern and secure webserver with no ads, no license fees and no restrictive EULA attached.</p>
             <p class="lead">
                 <a class="btn btn-primary btn-lg" href="#download" role="button"><i class="material-icons">file_download</i>
                     Download now</a>
@@ -46,7 +46,7 @@
         <div class="col-md-7">
             <h1><i class="material-icons">lock</i> Automatic TLS</h1>
             <p>
-                Caddy, and Wedge by extension, automatically integrates with <a href="https://letsencrypt.org">
+                Wedge automatically integrates with <a href="https://letsencrypt.org">
                 Let's Encrypt</a> to
                 provide painless HTTPS support out of the box.
             </p>
@@ -65,9 +65,8 @@
         <div class="col-md-7">
             <h1><i class="material-icons">apps</i> Plugin Support</h1>
 
-            <p>Wedge has support for a wide array of plugins. One of the core aims of the fork is to maintain
-                API compatibility with Caddy &mdash; so all of the great plugins you may already know should work out
-                of the box.
+            <p>Wedge has support for a wide array of plugins. Wedge is based on the Caddy source code and
+                maintains API compatibility so all Caddy plugins should be fully compatible.
             </p>
 
             <p>
@@ -163,7 +162,7 @@
                         Commercial support
                     </td>
                     <td>
-                        <i class="material-icons" data-toggle="tooltip" title="Wedge isn't a commercial offering. If you are a large corporation, consider purchasing a Caddy license.">warning</i>
+                        <i class="material-icons" data-toggle="tooltip" title="Wedge support is provided by our awesome community.">warning</i>
                         <span class="sr-only">Wedge does not have a commercial support offering</span>
                     </td>
                     <td>
@@ -186,8 +185,7 @@
         <hr>
         <div class="col-md-24">
             <h1><i class="material-icons">build</i> Get a custom build</h1>
-            <p>Go 1.8 includes a plugin build-mode for plugins that can be loaded at run-time. Unfortunately, &ldquo;plugin support is currently incomplete, only supports Linux, and has known bugs&rdquo;.
-                As such, Wedge currently requires plugins to be picked and compiled together. There is an intuitive interface you can use to select the plugins you'd like to enable and easily
+            <p>There is an intuitive interface you can use to select the plugins you'd like to enable and easily
                 build your own binary:
             </p>
             @b3.form(routes.HomeController.build) {
@@ -215,8 +213,6 @@
 
 
     </div>
-
-        <!-- <a href="https://github.com/WedgeServer/wedge/releases" class="btn btn-success">Download</a> -->
 
 
     </div>
